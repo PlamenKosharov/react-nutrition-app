@@ -1,13 +1,15 @@
 import styles from "../styles/SearchSection.module.css"
 import {useState} from "react";
 
+import Foods from "../components/FoodDataSection";
+import FoodDataSection from "../components/FoodDataSection";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 const URL = "https://api.calorieninjas.com/v1/nutrition?query="
 
 
-export default function SearchSection(){
+export default function SearchSection({setFoodData}){
   const [search, setSearch] = useState("")
-
 
   async function handleSearch(){
     if (search.trim() === ""){
@@ -27,7 +29,7 @@ export default function SearchSection(){
         throw new Error(response.statusText);
       }
       const data = await response.json()
-      console.log(data)
+      setFoodData(data)
     }
     catch (error) {
       alert(error.message)
