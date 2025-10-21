@@ -1,16 +1,23 @@
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
+const COLORS = ['#0088FE', '#FFBB28', '#00C49F'];
 
 function NutritionPie({foodData}) {
-  console.log("hi")
-  const data = [
-    { name: 'Protein', value: foodData.items[0].protein_g },
-    { name: 'Fat', value: foodData.items[0].fat_total_g  },
-    { name: 'Carbs', value: foodData.items[0].carbohydrates_total_g  },
-  ];
+  let data;
+  try{
+     data = [
+      { name: 'Protein', value: foodData.items[0].protein_g },
+      { name: 'Fat', value: foodData.items[0].fat_total_g  },
+      { name: 'Carbs', value: foodData.items[0].carbohydrates_total_g  },
+    ];
+  }
+  catch(error)
+  {
+    alert("You entered an invalid food.");
+    return;
+  }
   return (
-    <PieChart width={300} height={300}>
+    <PieChart width={250} height={250}>
       <Pie
         data={data}
         dataKey="value"

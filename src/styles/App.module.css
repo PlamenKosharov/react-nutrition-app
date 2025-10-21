@@ -6,6 +6,7 @@
 
     height: 100vh;
     background-color: whitesmoke;
+    overflow: hidden;
 }
 
 .app:before{
@@ -15,10 +16,14 @@
     height: 100%;
 
     background: radial-gradient(
-            rgba(34, 197, 94, 0.30),   /* emerald green */
-            rgba(52, 211, 153, 0.25),  /* teal-green accent */
+            rgba(173, 216, 230, 0.6),  /* baby blue central glow */
+            rgba(191, 239, 255, 0.5),  /* lighter baby blue accent */
             transparent 70%
     );
+
+
+
+
 
     filter: blur(150px);
     transform: translate(-50%, -50%);
