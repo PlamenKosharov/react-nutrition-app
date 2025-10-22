@@ -1,8 +1,8 @@
-import styles from "../styles/SearchSection.module.css"
+import styles from "./SearchSection.module.css"
+import buttonStyles from "../../styles/button.module.css"
+
 import {useState} from "react";
 
-import Foods from "../components/FoodDataSection";
-import FoodDataSection from "../components/FoodDataSection";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const URL = "https://api.calorieninjas.com/v1/nutrition?query="
@@ -45,7 +45,11 @@ export default function SearchSection({setFoodData}){
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />
-      <button onClick={handleSearch} className={styles.searchButton}>Search</button>
+      <button
+        onClick={handleSearch}
+        className={`${styles["searchButton"]} ${buttonStyles["button"]}`}
+      >Search
+      </button>
     </div>
   )
 }

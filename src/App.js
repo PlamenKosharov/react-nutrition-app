@@ -1,7 +1,7 @@
-import styles from './styles/App.module.css';
+import styles from './styles/general.module.css';
 
-import MenuCard from './components/MenuCard';
-import HistoryCard from './components/HistoryCard';
+import MenuCard from './components/MenuCard/MenuCard';
+import HistoryCard from './components/CurrentMealCard/CurrentMealCard';
 
 function App() {
   return (

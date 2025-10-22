@@ -1,4 +1,4 @@
-import NutritionChart from "../components/NutritionChart";
+import NutritionChart from "../NutritionChart/NutritionChart";
 
 export default function FoodDataSection({foodData}) {
   return(

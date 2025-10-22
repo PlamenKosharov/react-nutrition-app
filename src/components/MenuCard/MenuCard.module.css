@@ -1,0 +1,15 @@
+.menuCard {
+    width: 40%;
+    height: 55%;
+}
+
+.foodDataContainer{
+    height: 85%;
+}
+
+.addButton{
+    background-color: goldenrod;
+    margin-left: auto;
+    margin-bottom: 5px;
+    width: 13%;
+}

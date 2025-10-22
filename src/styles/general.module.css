@@ -16,13 +16,10 @@
     height: 100%;
 
     background: radial-gradient(
-            rgba(173, 216, 230, 0.6),  /* baby blue central glow */
-            rgba(191, 239, 255, 0.5),  /* lighter baby blue accent */
+            rgba(173, 216, 230, 0.6),
+            rgba(191, 239, 255, 0.5),
             transparent 70%
     );
-
-
-
 
 
     filter: blur(150px);
