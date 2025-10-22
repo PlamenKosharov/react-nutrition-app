@@ -40,7 +40,7 @@ export default function CurrentMealCard({mealData}) {
             <p style={{color: "#FFBB28",borderBottom:"1px solid #FFBB28"}}>
               F: {totalFat.toFixed()}</p>
           </div>
-          <p>Calories: {totalCalories.toFixed()}</p>
+          <p className={styles.caloriesInfo}>{totalCalories.toFixed()} kcal</p>
           <button
             className={`${styles["addMealButton"]} ${buttonStyles["button"]}`}
           >Add Meal
