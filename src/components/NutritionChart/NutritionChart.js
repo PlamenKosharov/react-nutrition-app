@@ -29,7 +29,7 @@ function NutritionPie({foodData}) {
         label
       >
         {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          <Cell key={`ce  ll-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
       <Tooltip />

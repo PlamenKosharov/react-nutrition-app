@@ -7,21 +7,26 @@ import SearchBar from "../SearchSection/SearchSection";
 import {useState} from "react";
 import FoodDataSection from "../FoodDataSection/FoodDataSection";
 
-export default function MenuCard(){
+export default function MenuCard({setMealData}){
   const [foodData, setFoodData] = useState();
-  const [mealsData, setMealsData] = useState([]);
 
+  function addFood(){
+      setMealData(prev => [...prev, foodData]);
+  }
 
-  console.log(foodData);
   return(
     <div className={`${styles["menuCard"]} ${cardStyles["card"]}`}>
       <h3 className={styles.title}>Nutrition App</h3>
       <FoodDataSection className={styles.foodDataContainer} foodData={foodData}/>
+
       {foodData &&
-        <button className={`${styles["addButton"]} ${buttonStyles["button"]}`}>
-        Add
+        <button
+          onClick={addFood}
+          className={`${styles["addButton"]} ${buttonStyles["button"]}`}>
+          Add
         </button>
       }
+
       <SearchBar setFoodData={setFoodData}/>
     </div>
   )

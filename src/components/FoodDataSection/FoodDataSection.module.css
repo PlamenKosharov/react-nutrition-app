@@ -1,0 +1,19 @@
+.foodInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.foodInfo{
+    background-color: black;
+    font-size: small;
+    border-radius: 50px;
+    padding: 2px 12px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 330px;
+    z-index: 1;
+}
