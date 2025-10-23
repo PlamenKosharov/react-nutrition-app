@@ -10,10 +10,13 @@
     background-color: black;
     font-size: small;
     border-radius: 50px;
-    padding: 2px 12px;
+    padding: 2px;
+    width: 80px;
+    text-align: center;
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 490px;
+    top: 45%;
+    right: 58%;
     z-index: 1;
 }

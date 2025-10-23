@@ -10,7 +10,7 @@ function App() {
   return (
     <div className={styles.app}>
       <MenuCard setMealData={setMealData} />
-      <CurrentMealCard mealData={mealData}/>
+      <CurrentMealCard mealData={mealData} setMealData={setMealData} />
     </div>
   );
 }

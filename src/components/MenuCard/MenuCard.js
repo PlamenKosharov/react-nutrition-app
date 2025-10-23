@@ -18,7 +18,6 @@ export default function MenuCard({setMealData}){
     <div className={`${styles["menuCard"]} ${cardStyles["card"]}`}>
       <h3 className={styles.title}>Nutrition App</h3>
       <FoodDataSection className={styles.foodDataContainer} foodData={foodData}/>
-
       {foodData &&
         <button
           onClick={addFood}
@@ -26,7 +25,6 @@ export default function MenuCard({setMealData}){
           Add
         </button>
       }
-
       <SearchBar setFoodData={setFoodData}/>
     </div>
   )
