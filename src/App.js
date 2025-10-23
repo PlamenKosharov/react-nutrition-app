@@ -5,12 +5,13 @@ import CurrentMealCard from './components/CurrentMealCard/CurrentMealCard';
 import {useState} from "react";
 
 function App() {
+  const [foodData, setFoodData] = useState();
   const [mealData, setMealData] = useState([]);
 
   return (
     <div className={styles.app}>
-      <MenuCard setMealData={setMealData} />
-      <CurrentMealCard mealData={mealData} setMealData={setMealData} />
+      <MenuCard foodData ={foodData} setFoodData={setFoodData} setMealData={setMealData} />
+      <CurrentMealCard foodData={foodData} mealData={mealData} setMealData={setMealData} />
     </div>
   );
 }

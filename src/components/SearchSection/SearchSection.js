@@ -3,10 +3,8 @@ import buttonStyles from "../../styles/button.module.css"
 
 import {useState} from "react";
 
-
 const API_KEY = process.env.REACT_APP_API_KEY;
 const URL = "https://api.calorieninjas.com/v1/nutrition?query="
-
 
 export default function SearchSection({setFoodData}){
   const [search, setSearch] = useState("")
@@ -29,6 +27,7 @@ export default function SearchSection({setFoodData}){
         throw new Error(response.statusText);
       }
       const data = await response.json()
+      data.items[0].id = `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
       setFoodData(data)
     }
     catch (error) {

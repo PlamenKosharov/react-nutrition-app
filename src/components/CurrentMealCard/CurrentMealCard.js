@@ -5,31 +5,31 @@ import FoodRow from "../FoodRow/FoodRow";
 
 export default function CurrentMealCard({mealData,setMealData}) {
   function removeFood(id){
-    setMealData(prev => prev.filter(food => food.id !== id));
+    setMealData(prev => prev.filter(food => food.items[0].id !== id));
   }
 
-  const totalProtein = mealData
-    ? mealData.reduce((sum, food) => sum + (food.items[0].protein_g || 0), 0)
-    : 0;
+  let totalProtein = 0;
+  let totalCarbs = 0;
+  let totalFat=0;
+  let totalCalories=0;
 
-  const totalCarbs= mealData
-    ? mealData.reduce((sum, food) => sum + (food.items[0].carbohydrates_total_g || 0), 0)
-    : 0;
-
-  const totalFat = mealData
-    ? mealData.reduce((sum, food) => sum + (food.items[0].fat_total_g || 0), 0)
-    : 0;
-
-  const totalCalories = mealData
-    ? mealData.reduce((sum, food) => sum + (food.items[0].calories || 0), 0)
-    : 0;
-
+  for (let food of mealData) {
+    totalProtein += food.items[0].protein_g;
+    totalCarbs += food.items[0].carbohydrates_total_g;
+    totalFat += food.items[0].fat_total_g
+    totalCalories += food.items[0].calories;
+  }
+  
   return(
     <div className={`${styles["currentMealCard"]} ${cardStyles["card"]}`}>
       <h3>Current Meal</h3>
       <div className={styles.foodContainer}>
         {mealData && mealData.map((meal, index) => (
-          <FoodRow key={index} id={index} name = {meal.items[0].name} removeFood={removeFood}/>
+          <FoodRow
+            key={index}
+            id = {meal.items[0].id}
+            name = {meal.items[0].name}
+            removeFood={removeFood}/>
         ))}
       </div>
       {mealData.length > 0 &&

@@ -3,12 +3,9 @@ import cardStyles from "../../styles/card.module.css"
 import buttonStyles from "../../styles/button.module.css"
 
 import SearchBar from "../SearchSection/SearchSection";
-
-import {useState} from "react";
 import FoodDataSection from "../FoodDataSection/FoodDataSection";
 
-export default function MenuCard({setMealData}){
-  const [foodData, setFoodData] = useState();
+export default function MenuCard({foodData,setFoodData,setMealData}){
 
   function addFood(){
       setMealData(prev => [...prev, foodData]);
