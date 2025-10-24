@@ -11,7 +11,7 @@ function App() {
   return (
     <div className={styles.app}>
       <MenuCard foodData ={foodData} setFoodData={setFoodData} setMealData={setMealData} />
-      <CurrentMealCard foodData={foodData} mealData={mealData} setMealData={setMealData} />
+      <CurrentMealCard foodData={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} />
     </div>
   );
 }

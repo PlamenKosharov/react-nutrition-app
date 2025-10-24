@@ -3,9 +3,9 @@ import cardStyles from "../../styles/card.module.css";
 import buttonStyles from "../../styles/button.module.css";
 import FoodRow from "../FoodRow/FoodRow";
 
-export default function CurrentMealCard({mealData,setMealData}) {
+export default function CurrentMealCard({setFoodData,mealData,setMealData}) {
   function removeFood(id){
-    setMealData(prev => prev.filter(food => food.items[0].id !== id));
+    setMealData(prev => prev.filter(food => food.id !== id));
   }
 
   let totalProtein = 0;
@@ -14,10 +14,10 @@ export default function CurrentMealCard({mealData,setMealData}) {
   let totalCalories=0;
 
   for (let food of mealData) {
-    totalProtein += food.items[0].protein_g;
-    totalCarbs += food.items[0].carbohydrates_total_g;
-    totalFat += food.items[0].fat_total_g
-    totalCalories += food.items[0].calories;
+    totalProtein += food.protein_g;
+    totalCarbs += food.carbohydrates_total_g;
+    totalFat += food.fat_total_g
+    totalCalories += food.calories;
   }
   
   return(
@@ -27,8 +27,10 @@ export default function CurrentMealCard({mealData,setMealData}) {
         {mealData && mealData.map((meal, index) => (
           <FoodRow
             key={index}
-            id = {meal.items[0].id}
-            name = {meal.items[0].name}
+            id = {meal.id}
+            name = {meal.name}
+            setFoodData={setFoodData}
+            foodRowData={meal}
             removeFood={removeFood}/>
         ))}
       </div>

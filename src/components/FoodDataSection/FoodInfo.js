@@ -5,14 +5,14 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 export default function FoodInfo({foodData}) {
 
-  const protein = foodData.items[0].protein_g;
-  const carbs = foodData.items[0].carbohydrates_total_g;
-  const fats = foodData.items[0].fat_total_g;
+  const protein = foodData.protein_g;
+  const carbs = foodData.carbohydrates_total_g;
+  const fats = foodData.fat_total_g;
 
   return(
     <div>
       <div className={styles.foodInfoContainer}>
-        <p className={styles.foodInfo}>{Number(foodData.items[0].calories).toFixed()} kcal</p>
+        <p className={styles.foodInfo}>{Number(foodData.calories).toFixed()} kcal</p>
       </div>
       <PieChart
         series={[{ data: [
