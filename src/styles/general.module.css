@@ -5,7 +5,6 @@
     align-items: center;
     height: 100vh;
     background-color: whitesmoke;
-    overflow: hidden;
     gap: 16px;
 }
 
@@ -15,7 +14,6 @@
     align-items: center;
     gap: 16px;
     background-color: white;
-    overflow: hidden;
 }
 
 

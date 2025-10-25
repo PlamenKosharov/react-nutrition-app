@@ -1,8 +1,11 @@
 .currentPlanCard{
     display: flex;
     flex-direction: column;
-    height: 70px;
+    height: 85px;
+    gap: 12px;
 }
 
-.title{
+.mealButton{
+    background-color: green;
+    padding: 6px 12px;
 }

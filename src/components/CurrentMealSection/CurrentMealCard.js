@@ -3,9 +3,18 @@ import cardStyles from "../../styles/card.module.css";
 import buttonStyles from "../../styles/button.module.css";
 import FoodRow from "../FoodRow/FoodRow";
 
-export default function CurrentMealCard({setFoodData,mealData,setMealData}) {
+export default function CurrentMealCard({setFoodData,mealData,setMealData,setPlanData}) {
   function removeFood(id){
     setMealData(prev => prev.filter(food => food.id !== id));
+  }
+
+  function addMealToPlan(currentMeal,mealName,protein,carbs,fats,calories){
+    currentMeal.name = mealName;
+    currentMeal.protein = protein;
+    currentMeal.carbs = carbs;
+    currentMeal.fats = fats;
+    currentMeal.calories = calories;
+    setPlanData(prev => [...prev, currentMeal])
   }
 
   let totalProtein = 0;
@@ -47,10 +56,13 @@ export default function CurrentMealCard({setFoodData,mealData,setMealData}) {
               F: {totalFat.toFixed()}</p>
           </div>
           <p className={styles.caloriesInfo}>{totalCalories.toFixed()} kcal</p>
+
           <button
             className={`${styles["addMealButton"]} ${buttonStyles["button"]}`}
-          >Add Meal
+            onClick={() => addMealToPlan(mealData,prompt("Meal name?"),totalProtein,totalCarbs,totalFat,totalCalories)}
+            >Add Meal
           </button>
+
         </div>
       }
     </div>
