@@ -10,8 +10,6 @@ function App() {
   const [mealData, setMealData] = useState([]);
   const [planData, setPlanData] = useState([]);
 
-  console.log(planData);
-
   return (
     <div className={styles.app}>
       <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
@@ -19,7 +17,7 @@ function App() {
           <CalculatorCard foodData ={foodData} setFoodData={setFoodData} setMealData={setMealData} />
           <CurrentMealCard foodData={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} setPlanData={setPlanData} />
         </div>
-        <CurrentPlanCard planData={planData}/>
+        <CurrentPlanCard planData={planData} setMealData={setMealData}/>
       </div>
     </div>
   );

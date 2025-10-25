@@ -4,8 +4,19 @@ import styles from "./CurrentPlanCard.module.css"
 
 import MealButton from "./MealButton"
 
-export default function CurrentPlanCard({planData}){
-  //foreach meal of planData, get the total macros and add them and save em in variables
+export default function CurrentPlanCard({planData,setMealData}){
+  let totalProtein = 0;
+  let totalCarbs = 0;
+  let totalFat = 0;
+  let totalCalories = 0;
+
+  for (let i = 0; i < planData.length; i++){
+    totalProtein += planData[i].protein;
+    totalCarbs += planData[i].carbs;
+    totalFat += planData[i].fats;
+    totalCalories += planData[i].calories;
+  }
+
   return(
     <div className={`${styles["currentPlanCard"]} ${cardStyles["card"]}`}>
       <h4 className={styles.title}>Current Plan</h4>
@@ -13,6 +24,7 @@ export default function CurrentPlanCard({planData}){
         {planData.map((meal, index) => (
           <MealButton
             mealData={meal}
+            setMealData={setMealData}
             key={meal.name}
             protein={meal.protein}
             carbs={meal.carbs}
