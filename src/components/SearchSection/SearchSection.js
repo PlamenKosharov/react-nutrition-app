@@ -21,6 +21,10 @@ export default function SearchSection({setFoodData}){
       return;
     }
 
+    if (grams.trim() === ""){
+      alert("Please enter grams.");
+    }
+
     try{
       const response = await fetch(`${URL}${(search)}`, {
         method: "GET",
@@ -62,9 +66,14 @@ export default function SearchSection({setFoodData}){
       />
       <input
         className={styles.searchInput}
-        type={"text"}
+        type={"number"}
         placeholder={"Grams..."}
-        onChange={(e) => setGrams(e.target.value)}
+        onChange={e => {
+          const next = e.target.value
+          if (/^\d*$/.test(next)) {
+            setGrams(next)
+          }
+        }}
         value={grams}
       />
       <button
