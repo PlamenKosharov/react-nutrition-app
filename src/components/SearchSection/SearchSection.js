@@ -59,12 +59,12 @@ export default function SearchSection({setFoodData}){
     <div className={styles.searchSection}>
       <input
         className={styles.searchInput}
-        type={"text"}
-        placeholder={"Search..."}
-        onChange={e =>{
-          const next = e.target.value
-          if (/^[A-Za-z]*$/.test(next)){
-            setSearch(next)
+        type="text"
+        placeholder="Search..."
+        onChange={e => {
+          const next = e.target.value;
+          if (/^[A-Za-z ]*$/.test(next)) {
+            setSearch(next);
           }
         }}
         value={search}

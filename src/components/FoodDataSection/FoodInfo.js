@@ -1,6 +1,6 @@
 import styles from "./FoodDataSection.module.css";
 
-import { PieChart,PieCenterLabel } from '@mui/x-charts';
+import { PieChart } from '@mui/x-charts';
 
 export default function FoodInfo({foodData}) {
 
@@ -23,11 +23,11 @@ export default function FoodInfo({foodData}) {
         <PieChart
           series={[{
             data: [
-              { id: 0, value: protein, label: 'Protein' },
-              { id: 1, value: carbs, label: 'Carbs' },
-              { id: 2, value: fats,  label: 'Fats' },
+              { id: 0, value: protein, label: 'Protein', color: "#FF8A80" },
+              { id: 1, value: carbs, label: 'Carbs', color: "#5eb1ff" },
+              { id: 2, value: fats,  label: 'Fats', color: "#FFF176" },
             ],
-            innerRadius: 70
+            innerRadius: 70,
           }]}
           width={200}
           height={200}
