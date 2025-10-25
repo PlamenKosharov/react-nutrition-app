@@ -51,7 +51,7 @@ export default function SearchSection({setFoodData}){
       setFoodData(updatedData);
     }
     catch (error) {
-      alert(error.message)
+      alert("Invalid Food")
     }
   }
 
@@ -61,7 +61,12 @@ export default function SearchSection({setFoodData}){
         className={styles.searchInput}
         type={"text"}
         placeholder={"Search..."}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={e =>{
+          const next = e.target.value
+          if (/^[A-Za-z]*$/.test(next)){
+            setSearch(next)
+          }
+        }}
         value={search}
       />
       <input
