@@ -45,24 +45,22 @@ export default function CurrentMealCard({setFoodData,mealData,setMealData,setPla
       </div>
       {mealData.length > 0 &&
         <div className={styles.mealInfo}>
-          <div className={styles.macros}>
-            <p style={{color: "#00C49F",borderBottom:"1px solid #00C49F"}}>
-              C: {totalCarbs.toFixed()}</p>
-
-            <p style={{color: "#0088FE",borderBottom:"1px solid #00C49F"}}>
-              P: {totalProtein.toFixed()}</p>
-
-            <p style={{color: "#FFBB28",borderBottom:"1px solid #FFBB28"}}>
-              F: {totalFat.toFixed()}</p>
+          <div>
+            <div className={styles.macros}>
+              <p style={{color: "#00C49F",borderBottom:"2px solid #00C49F"}}>
+                C: {totalCarbs.toFixed()}</p>
+              <p style={{color: "#0088FE",borderBottom:"2px solid #00C49F"}}>
+                P: {totalProtein.toFixed()}</p>
+              <p style={{color: "#FFBB28",borderBottom:"2px solid #FFBB28"}}>
+                F: {totalFat.toFixed()}</p>
+            </div>
+            <p className={styles.caloriesInfo}>{totalCalories.toFixed()} kcal</p>
           </div>
-          <p className={styles.caloriesInfo}>{totalCalories.toFixed()} kcal</p>
-
           <button
             className={`${styles["addMealButton"]} ${buttonStyles["button"]}`}
             onClick={() => addMealToPlan(mealData,prompt("Meal name?"),totalProtein,totalCarbs,totalFat,totalCalories)}
             >Add Meal
           </button>
-
         </div>
       }
     </div>

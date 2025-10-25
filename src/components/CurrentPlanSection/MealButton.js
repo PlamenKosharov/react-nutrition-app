@@ -6,7 +6,7 @@ export default function MealButton({mealData,setMealData}){
     setMealData(mealData);
   }
   return(
-    <button 
+    <button
       className={`${styles["mealButton"]} ${buttonStyles['button']}`}
       onClick={updateMealData}
     >

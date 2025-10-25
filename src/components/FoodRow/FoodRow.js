@@ -3,16 +3,16 @@ import buttonStyles from "../../styles/button.module.css"
 
 export default function FoodRow({foodRowData,setFoodData,name,removeFood,id}){
 
-  function print(e){
+  function viewFood(e){
     if(!e.target.dataset.ignore){
       setFoodData(foodRowData)
     }
   }
 
   return(
-    <div onClick={print} className={`${styles["foodRow"]} ${buttonStyles["button"]}`}>
+    <div onClick={viewFood} className={`${styles["foodRow"]} ${buttonStyles["button"]}`}>
       {name}
-      <label data-ignore={"true"} onClick={() => removeFood(id)}>X</label>
+      <label className={styles.deleteIcon} data-ignore={"true"} onClick={() => removeFood(id)}>X</label>
     </div>
   )
 }
