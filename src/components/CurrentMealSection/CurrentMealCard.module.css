@@ -1,6 +1,5 @@
 .currentMealCard {
-    width: 15%;
-    height: 60%;
+    height: 400px;
     min-height: 375px;
     min-width: 200px;
     display: flex;

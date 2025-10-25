@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
     gap: 5px;
 }
 
@@ -16,7 +17,7 @@
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 45%;
-    right: 58%;
+    top: 42%;
+    right: 57%;
     z-index: 1;
 }

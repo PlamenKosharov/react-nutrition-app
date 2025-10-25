@@ -1,7 +1,8 @@
 import styles from './styles/general.module.css';
 
-import MenuCard from './components/MenuCard/MenuCard';
-import CurrentMealCard from './components/CurrentMealCard/CurrentMealCard';
+import CalculatorCard from './components/CalculatorSection/CalculatorCard';
+import CurrentMealCard from './components/CurrentMealSection/CurrentMealCard';
+import CurrentPlanCard from './components/CurrentPlanSection/CurrentPlanCard';
 import {useState} from "react";
 
 function App() {
@@ -10,8 +11,13 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <MenuCard foodData ={foodData} setFoodData={setFoodData} setMealData={setMealData} />
-      <CurrentMealCard foodData={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} />
+      <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
+        <div className={styles.mainContainer}>
+          <CalculatorCard foodData ={foodData} setFoodData={setFoodData} setMealData={setMealData} />
+          <CurrentMealCard foodData={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} />
+        </div>
+        <CurrentPlanCard/>
+      </div>
     </div>
   );
 }
