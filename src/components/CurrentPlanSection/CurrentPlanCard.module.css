@@ -2,10 +2,27 @@
     display: flex;
     flex-direction: column;
     height: 85px;
-    gap: 12px;
+    gap: 8px;
 }
 
 .mealButton{
     background-color: green;
-    padding: 6px 12px;
+    padding: 2px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.title{
+    cursor: pointer;
+}
+
+.removeIcon{
+    transition: all 0.25s ease;
+}
+
+.removeIcon:hover{
+    color:red;
+    cursor: pointer;
 }

@@ -4,7 +4,8 @@ import styles from "./CurrentPlanCard.module.css"
 
 import MealButton from "./MealButton"
 
-export default function CurrentPlanCard({planData,setMealData}) {
+export default function CurrentPlanCard({planData,setPlanData,setMealData}) {
+  
   return(
     <div className={`${styles["currentPlanCard"]} ${cardStyles["card"]}`}>
       <h4 className={styles.title}>Current Plan</h4>
@@ -14,6 +15,8 @@ export default function CurrentPlanCard({planData,setMealData}) {
             key={crypto.randomUUID()}
             mealData={meal}
             setMealData={setMealData}
+            planData={planData}
+            setPlanData={setPlanData}
           />
         ))}
       </div>
