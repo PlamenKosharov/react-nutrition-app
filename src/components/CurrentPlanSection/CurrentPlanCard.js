@@ -4,7 +4,7 @@ import styles from "./CurrentPlanCard.module.css"
 
 import MealButton from "./MealButton"
 
-export default function CurrentPlanCard({planData,setMealData}){
+export default function CurrentPlanCard({planData,setMealData,mealName}) {
   let totalProtein = 0;
   let totalCarbs = 0;
   let totalFat = 0;
@@ -21,15 +21,12 @@ export default function CurrentPlanCard({planData,setMealData}){
     <div className={`${styles["currentPlanCard"]} ${cardStyles["card"]}`}>
       <h4 className={styles.title}>Current Plan</h4>
       <div style={{display: "flex", flexDirection: "row",gap:"10px"}}>
-        {planData.map((meal, index) => (
+        {planData.map((meal) => (
           <MealButton
+            key={crypto.randomUUID()}  // unique string or number
             mealData={meal}
             setMealData={setMealData}
-            key={meal.name}
-            protein={meal.protein}
-            carbs={meal.carbs}
-            fats={meal.fats}
-            calories={meal.calories}
+            name={mealName}
           />
         ))}
       </div>

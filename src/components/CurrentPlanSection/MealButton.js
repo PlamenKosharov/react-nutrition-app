@@ -1,16 +1,17 @@
 import styles from "./CurrentPlanCard.module.css"
 import buttonStyles from "../../styles/button.module.css"
 
-export default function MealButton({mealData,setMealData}){
+export default function MealButton({mealData,setMealData,name}){
   function updateMealData(){
-    setMealData(mealData);
+    setMealData(Object.values(mealData));
   }
+
   return(
     <button
       className={`${styles["mealButton"]} ${buttonStyles['button']}`}
       onClick={updateMealData}
     >
-      {mealData.name}
+      {name}
     </button>
   )
 }

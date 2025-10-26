@@ -8,6 +8,7 @@ import {useState} from "react";
 function App() {
   const [foodData, setFoodData] = useState();
   const [mealData, setMealData] = useState([]);
+  const [mealName, setMealName] = useState("");
   const [planData, setPlanData] = useState([]);
 
   return (
@@ -15,9 +16,14 @@ function App() {
       <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
         <div className={styles.mainContainer}>
           <CalculatorCard foodData ={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} />
-          <CurrentMealCard foodData={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} setPlanData={setPlanData} />
+          <CurrentMealCard
+            foodData={foodData} setFoodData={setFoodData}
+            mealData={mealData} setMealData={setMealData}
+            planData={planData} setPlanData={setPlanData}
+            setMealName={setMealName}
+          />
         </div>
-        <CurrentPlanCard planData={planData} setMealData={setMealData}/>
+        <CurrentPlanCard planData={planData} setMealData={setMealData} mealName={mealName}/>
       </div>
     </div>
   );

@@ -3,18 +3,14 @@ import cardStyles from "../../styles/card.module.css";
 import buttonStyles from "../../styles/button.module.css";
 import FoodRow from "./FoodRow/FoodRow";
 
-export default function CurrentMealCard({setFoodData,mealData,setMealData,setPlanData}) {
+export default function CurrentMealCard({setFoodData,mealData,setMealData,setPlanData,setMealName}) {
   function removeFood(id){
     setMealData(prev => prev.filter(food => food.id !== id));
   }
 
-  function addMealToPlan(currentMeal,mealName,protein,carbs,fats,calories){
-    currentMeal.name = mealName;
-    currentMeal.protein = protein;
-    currentMeal.carbs = carbs;
-    currentMeal.fats = fats;
-    currentMeal.calories = calories;
-    setPlanData(prev => [...prev, currentMeal])
+  function addMealToPlan(currentMeal,name){
+    setMealName(name)
+    setPlanData(prev => [...prev, { ...structuredClone(currentMeal)}]);
   }
 
   let totalProtein = 0;
@@ -28,7 +24,7 @@ export default function CurrentMealCard({setFoodData,mealData,setMealData,setPla
     totalFat += food.fat_total_g
     totalCalories += food.calories;
   }
-  
+
   return(
     <div className={`${styles["currentMealCard"]} ${cardStyles["card"]}`}>
       <h3>Current Meal</h3>
