@@ -5,20 +5,19 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(135deg, #4f8df6, #3b72e7);
-    padding: 6px 20px;
+    background: linear-gradient(135deg, #3772ff, #3b72e7);
+    padding: 4px 18px;
     border: none;
     border-radius: 999px; /* pill shape */
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s ease;
-    box-shadow: 0 8px 24px rgba(79, 141, 246, 0.25);
 }
 
 .foodRow:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(79, 141, 246, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 5px rgba(79, 141, 246, 0.25);
 }
 
 .foodRow:active {

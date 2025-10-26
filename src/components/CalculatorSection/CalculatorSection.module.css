@@ -12,7 +12,7 @@
     background-color: #30bced;
     margin-left: auto;
     margin-bottom: 5px;
-    width: 17%;
+    min-width: 76px;
 }
 
 .addButton:hover{
