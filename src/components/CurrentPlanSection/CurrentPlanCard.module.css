@@ -3,9 +3,9 @@
     flex-direction: row;
     height: 100px;
     width: 100%;
-    max-width: 100vw;
+    max-width: 788px;
     gap: 12px;
-    flex-wrap: wrap;
+    overflow: auto;
 }
 
 .mealButton{
