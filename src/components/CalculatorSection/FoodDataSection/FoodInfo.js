@@ -23,9 +23,9 @@ export default function FoodInfo({foodData}) {
         <PieChart
           series={[{
             data: [
-              { id: 0, value: protein, label: 'Protein', color: "#fe5f55" },
-              { id: 1, value: carbs, label: 'Carbs', color: "#30bced" },
-              { id: 2, value: fats,  label: 'Fats', color: "#FFF176" },
+              { id: 0, value: protein, label: 'Protein', color: "#f42a45" },
+              { id: 1, value: carbs, label: 'Carbs', color: "#5DCD77" },
+              { id: 2, value: fats,  label: 'Fats', color: "#f2dd6e" },
             ],
             innerRadius: 70,
           }]}
