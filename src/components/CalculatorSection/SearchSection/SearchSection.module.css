@@ -15,5 +15,9 @@
 }
 
 .searchButton {
-    background-color: limegreen;
+    background-color: #3772ff;
+}
+
+.searchButton:hover{
+    box-shadow: 0 12px 32px rgba(79, 141, 246, 0.35);
 }

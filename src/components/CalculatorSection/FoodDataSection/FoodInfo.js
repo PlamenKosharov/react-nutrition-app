@@ -23,8 +23,8 @@ export default function FoodInfo({foodData}) {
         <PieChart
           series={[{
             data: [
-              { id: 0, value: protein, label: 'Protein', color: "#FF8A80" },
-              { id: 1, value: carbs, label: 'Carbs', color: "#5eb1ff" },
+              { id: 0, value: protein, label: 'Protein', color: "#fe5f55" },
+              { id: 1, value: carbs, label: 'Carbs', color: "#30bced" },
               { id: 2, value: fats,  label: 'Fats', color: "#FFF176" },
             ],
             innerRadius: 70,
@@ -32,7 +32,7 @@ export default function FoodInfo({foodData}) {
           width={200}
           height={200}
         />
-        <div className={styles.foodInfo}>
+        <div className={styles.calorieInfo}>
           {calories.toFixed()} kcal
         </div>
       </div>
