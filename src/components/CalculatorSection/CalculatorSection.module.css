@@ -18,3 +18,11 @@
 .addButton:hover{
     box-shadow: 0 8px 24px rgba(79, 141, 246, 0.25);
 }
+
+@media (max-width: 768px) {
+    .calculatorCard {
+        width: 50%;
+        height: 45%;
+        margin-top: 50px;
+    }
+}

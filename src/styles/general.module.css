@@ -38,9 +38,17 @@
     z-index: 0;
 }
 
-@media (max-width: 768px) {
-    .mainContainer {
+@media (max-width: 768px){
+    .mainContainer{
+        display: flex;
         flex-direction: column;
+        width: 100%;
+        padding: 0 16px;
         gap: 12px;
+    }
+
+    .mainContainer > * {
+        width: 100% ;
+        max-width: 45% ;
     }
 }
