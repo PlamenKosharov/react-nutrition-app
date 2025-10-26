@@ -1,4 +1,4 @@
-import FoodInfo from "../FoodDataSection/FoodInfo";
+import FoodInfo from "./FoodInfo";
 
 export default function FoodDataSection({foodData}) {
   return(

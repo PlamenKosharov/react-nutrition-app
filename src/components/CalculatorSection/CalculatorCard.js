@@ -2,8 +2,8 @@ import styles from "./CalculatorSection.module.css"
 import cardStyles from "../../styles/card.module.css"
 import buttonStyles from "../../styles/button.module.css"
 
-import SearchBar from "../SearchSection/SearchSection";
-import FoodDataSection from "../FoodDataSection/FoodDataSection";
+import SearchBar from "./SearchSection/SearchSection";
+import FoodDataSection from "./FoodDataSection/FoodDataSection";
 
 export default function CalculatorCard({foodData,setFoodData,setMealData}){
 

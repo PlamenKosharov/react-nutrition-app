@@ -1,7 +1,7 @@
 import styles from "./CurrentMealCard.module.css"
 import cardStyles from "../../styles/card.module.css";
 import buttonStyles from "../../styles/button.module.css";
-import FoodRow from "../FoodRow/FoodRow";
+import FoodRow from "./FoodRow/FoodRow";
 
 export default function CurrentMealCard({setFoodData,mealData,setMealData,setPlanData}) {
   function removeFood(id){

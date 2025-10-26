@@ -1,5 +1,5 @@
 import styles from "./FoodRow.module.css"
-import buttonStyles from "../../styles/button.module.css"
+import buttonStyles from "../../../styles/button.module.css"
 
 export default function FoodRow({foodRowData,setFoodData,name,removeFood,id}){
 

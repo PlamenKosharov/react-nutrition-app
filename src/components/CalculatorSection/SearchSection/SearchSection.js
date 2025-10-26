@@ -1,5 +1,5 @@
 import styles from "./SearchSection.module.css"
-import buttonStyles from "../../styles/button.module.css"
+import buttonStyles from "../../../styles/button.module.css"
 
 import {useState} from "react";
 
