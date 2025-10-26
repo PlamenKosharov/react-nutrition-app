@@ -14,7 +14,7 @@ function App() {
     <div className={styles.app}>
       <div style={{display: 'flex', flexDirection: 'column', gap: '16px'}}>
         <div className={styles.mainContainer}>
-          <CalculatorCard foodData ={foodData} setFoodData={setFoodData} setMealData={setMealData} />
+          <CalculatorCard foodData ={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} />
           <CurrentMealCard foodData={foodData} setFoodData={setFoodData} mealData={mealData} setMealData={setMealData} setPlanData={setPlanData} />
         </div>
         <CurrentPlanCard planData={planData} setMealData={setMealData}/>

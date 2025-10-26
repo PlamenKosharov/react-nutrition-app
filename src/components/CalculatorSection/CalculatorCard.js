@@ -5,10 +5,16 @@ import buttonStyles from "../../styles/button.module.css"
 import SearchBar from "./SearchSection/SearchSection";
 import FoodDataSection from "./FoodDataSection/FoodDataSection";
 
-export default function CalculatorCard({foodData,setFoodData,setMealData}){
+export default function CalculatorCard({foodData,setFoodData,mealData,setMealData}){
 
-  function addFood(){
-      setMealData(prev => [...prev, foodData]);
+  function addFood(currentFoodData){
+      for (let food of mealData){
+        if (food.id === currentFoodData.id){
+          alert("You already added that food!")
+          return;
+        }
+      }
+      setMealData(prev => [...prev, currentFoodData]);
   }
 
   return(
@@ -17,7 +23,7 @@ export default function CalculatorCard({foodData,setFoodData,setMealData}){
       <FoodDataSection className={styles.foodDataContainer} foodData={foodData}/>
       {foodData &&
         <button
-          onClick={addFood}
+          onClick={() => addFood(foodData)}
           className={`${styles["addButton"]} ${buttonStyles["button"]}`}>
           Add
         </button>
