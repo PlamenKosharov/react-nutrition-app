@@ -8,7 +8,6 @@ import {useState} from "react";
 function App() {
   const [foodData, setFoodData] = useState();
   const [mealData, setMealData] = useState([]);
-  const [mealName, setMealName] = useState("");
   const [planData, setPlanData] = useState([]);
 
   return (
@@ -20,10 +19,9 @@ function App() {
             foodData={foodData} setFoodData={setFoodData}
             mealData={mealData} setMealData={setMealData}
             planData={planData} setPlanData={setPlanData}
-            setMealName={setMealName}
           />
         </div>
-        <CurrentPlanCard planData={planData} setMealData={setMealData} mealName={mealName}/>
+        <CurrentPlanCard planData={planData} setMealData={setMealData}/>
       </div>
     </div>
   );

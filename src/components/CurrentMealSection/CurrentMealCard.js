@@ -3,20 +3,33 @@ import cardStyles from "../../styles/card.module.css";
 import buttonStyles from "../../styles/button.module.css";
 import FoodRow from "./FoodRow/FoodRow";
 
-export default function CurrentMealCard({setFoodData,mealData,setMealData,setPlanData,setMealName}) {
+export default function CurrentMealCard({setFoodData,mealData,setMealData,setPlanData}) {
   function removeFood(id){
     setMealData(prev => prev.filter(food => food.id !== id));
   }
 
-  function addMealToPlan(currentMeal,name){
-    setMealName(name)
-    setPlanData(prev => [...prev, { ...structuredClone(currentMeal)}]);
+  function addMealToPlan(currentMeal,name,protein,carbs,fat,calories){
+    if (name.trim() === ""){
+      alert("Please enter a meal name!");
+      return;
+    }
+    const newMealData = {
+      ...currentMeal,
+      name: name,
+      id: crypto.randomUUID(),
+      protein: protein,
+      carbs: carbs,
+      fat: fat,
+      calories: calories
+  }
+    setPlanData(prev => [...prev, { ...structuredClone(newMealData)}]);
   }
 
   let totalProtein = 0;
   let totalCarbs = 0;
   let totalFat=0;
   let totalCalories=0;
+
 
   for (let food of mealData) {
     totalProtein += food.protein_g;
