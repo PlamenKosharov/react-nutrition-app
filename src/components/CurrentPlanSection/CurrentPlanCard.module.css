@@ -1,8 +1,9 @@
 .currentPlanCard{
     display: flex;
-    flex-direction: column;
-    height: 85px;
-    gap: 8px;
+    flex-direction: row;
+    height: 100px;
+    gap: 12px;
+    max-width: 785px;
 }
 
 .mealButton{
@@ -25,4 +26,34 @@
 .removeIcon:hover{
     color:red;
     cursor: pointer;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 480px;
+    max-width: 480px;
+    overflow: auto;
+}
+
+.macros{
+    display: flex;
+    flex-direction: row;
+}
+
+.proteinBubble{
+    color: #fe5f55;
+}
+
+.carbBubble{
+    color: #30bced;
+}
+
+.fatBubble{
+    color: darkgoldenrod;
+}
+
+.calorieBubble{
+    color: black;
 }

@@ -17,6 +17,10 @@ export default function CurrentMealCard({setFoodData,mealData,setMealData,setPla
       ...currentMeal,
       name: name,
       id: crypto.randomUUID(),
+      protein: protein,
+      carbs: carbs,
+      fat: fat,
+      calories: calories
   }
     setPlanData(prev => [...prev, { ...structuredClone(newMealData)}]);
   }
