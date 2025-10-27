@@ -16,12 +16,12 @@
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .card {
-        max-width: 100vw;          /* hard stop — never exceed screen width */
-        width: 100%;               /* take up full available width */
-        padding: 16px;             /* adjusted so padding doesn’t overflow */
-        box-sizing: border-box;    /* makes padding part of width, avoids spill */
-        overflow-x: hidden;        /* remove any accidental scroll forcing */
+        max-width: 100vw;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 }

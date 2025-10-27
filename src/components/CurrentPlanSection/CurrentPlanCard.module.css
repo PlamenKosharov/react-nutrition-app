@@ -66,9 +66,12 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .currentPlanCard {
-        padding: 12px;             /* so content doesn't touch edges */
+        padding: 12px;
+        max-width: 100vw;
+        overflow: scroll;
+        flex-wrap: wrap;
     }
 
     .leftContainer > div {
