@@ -20,7 +20,7 @@ A React application that lets users type a food name and instantly see its nutri
 * **React**
 * **API**: CalorieNinjas
 
-## Try it yourself
+## ▶️ Try it 
 * The App is deployed on Vercel
 * https://react-nutrition-app-iota.vercel.app/
 
