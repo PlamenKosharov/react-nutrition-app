@@ -56,7 +56,6 @@ For local testing only, you may temporarily use a `.env` file:
 REACT_APP_NUTRITION_API_KEY=your_api_key_here
 ```
 
-````
 
 ### 4. Run the app
 ```bash
