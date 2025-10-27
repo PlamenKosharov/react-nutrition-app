@@ -1,6 +1,7 @@
 .calculatorCard {
     display: flex;
     flex-direction: column;
+
     height: 450px;
 }
 
@@ -10,8 +11,10 @@
 
 .addButton{
     background-color: #30bced;
+
     margin-left: auto;
     margin-bottom: 5px;
+
     min-width: 76px;
 }
 
@@ -23,6 +26,5 @@
     .calculatorCard {
         width: 50%;
         height: 45%;
-        margin-top: 50px;
     }
 }

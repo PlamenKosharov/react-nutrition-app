@@ -1,17 +1,19 @@
 .searchSection {
     display: flex;
     gap: 12px;
-    width: 100%;
 
+    width: 100%;
 }
 
 .searchInput {
     width: 90%;
     padding: 8px;
+
     border-radius: 50px;
     outline: none;
     border: none;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+
     transition: all 0.25s ease;
 }
 
