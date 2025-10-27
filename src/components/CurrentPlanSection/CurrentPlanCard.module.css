@@ -70,11 +70,19 @@
 
         padding: 12px;
 
+        max-width: 95vw;
 
         overflow: scroll;
     }
 
     .leftContainer > div {
         justify-content: center;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .currentPlanCard {
+        margin-bottom: 5%;
     }
 }
